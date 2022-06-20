@@ -26,7 +26,8 @@ RUN yum install -y yum-plugin-fastestmirror && \
     perl-Moo "perl(namespace::clean)" "perl(Crypt::Random::Source)" "perl(Exporter::Tiny)" \
     "perl(Math::Random::ISAAC)" "perl(Math::Random::Secure)" "perl(Module::Find)" \
     "perl(Types::TypeTiny)" rsyslog supervisor tar which && \
-    yum install -y http://ftp.otrs.org/pub/otrs/RPMS/rhel/7/otrs-${OTRS_VERSION}.noarch.rpm && \
+#    yum install -y http://ftp.otrs.org/pub/otrs/RPMS/rhel/7/otrs-${OTRS_VERSION}.noarch.rpm && \
+    yum install -y https://download.znuny.org/releases/RPMS/rhel/7/otrs-${OTRS_VERSION}.noarch.rpm && \
     /opt/otrs/bin/otrs.CheckModules.pl && \
     yum clean all
 # Add scripts and function files

@@ -519,7 +519,7 @@ function upgrade () {
   sleep 10
 
   local version_blacklist="5.0.91\n5.0.92"
-  local OTRS_PKG_REPO="https://ftp.otrs.org/pub/otrs/packages/"
+  local OTRS_PKG_REPO="https://download.znuny.org/releases/packages/"
   local upgrade_log="/tmp/upgrade.log"
   tmp_dir="/tmp/upgrade/"
   mkdir -p ${tmp_dir}

@@ -5,7 +5,7 @@
 . ./util_functions.sh
 
 VERBOSE=1
-OTRS_LATEST="http://ftp.otrs.org/pub/otrs/otrs-latest.tar.gz"
+OTRS_LATEST="https://download.znuny.org/releases/otrs-latest.tar.gz"
 OTRS_GIT_URL="git@github.com:juanluisbaptiste/docker-otrs.git"
 OTRS_UPDATE_LOG="./check_otrs_version.log"
 GIT_PUSH=0
@@ -84,7 +84,7 @@ if [ $? -eq 0 ]; then
   for i in "01" "02" "03"; do
     rpm_version="${otrs_version}-${i}"
     verbose "Querying RPM packages version"
-    OTRS_LATEST_RPM="http://ftp.otrs.org/pub/otrs/RPMS/rhel/7/otrs-${rpm_version}.noarch.rpm"
+    OTRS_LATEST_RPM="https://download.znuny.org/releases/RPMS/rhel/7/otrs-${rpm_version}.noarch.rpm"
 
     wget -q ${OTRS_LATEST_RPM}
     if [ $? -eq 0 ];then
